@@ -1,4 +1,5 @@
 import React from 'react';
+import { upvoteQuote } from '../actions/quotes';
 
 const QuoteCard = (props) =>
 <div>
@@ -12,26 +13,24 @@ const QuoteCard = (props) =>
       </div>
       <div className="float-right">
         <div className="btn-group btn-group-sm" role="group" aria-label="Basic example">
-
           <button
             type="button"
             className="btn btn-primary"
+            onClick={() => upvoteQuote(props.quote.id)}
           >
             Upvote
           </button>
-
           <button
             type="button"
             className="btn btn-secondary"
           >
             Downvote
           </button>
-
           <button
             type="button"
             className="btn btn-danger"
-            onClick={props.removeQuote()}
-          >
+            onClick={() => props.removeQuote()}
+            >
             <span aria-hidden="true">&times;</span>
           </button>
         </div>

@@ -12,6 +12,7 @@ class Quotes extends Component {
         key={quote.id}
         quote={quote}
         removeQuote={removeQuote} 
+        upvoteQuote={upvoteQuote}
       />
       )
     })
@@ -39,5 +40,8 @@ const mapStateToProps = state => {
     quotes: state.quotes
   }
 }
+
+
+
 
 export default connect(mapStateToProps, {removeQuote, upvoteQuote, downvoteQuote})(Quotes);

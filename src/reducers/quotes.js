@@ -1,5 +1,5 @@
 export default (state = [], action) => {
-
+  console.log(action.type)
   switch (action.type) {
     case "ADD_QUOTE":
      return [...state, action.quote]
@@ -9,7 +9,8 @@ export default (state = [], action) => {
       return state.filter(quote => quote.id !== action.quoteId)
 
     case "UPVOTE_QUOTE":
-        return {
+      console.log("upvote")
+        return {    
 
         }
 
@@ -19,6 +20,7 @@ export default (state = [], action) => {
       }
 
      default:
+       console.log("default")
        return state;
   }
 }
