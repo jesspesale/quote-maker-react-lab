@@ -12,22 +12,25 @@ const QuoteCard = (props) =>
       </div>
       <div className="float-right">
         <div className="btn-group btn-group-sm" role="group" aria-label="Basic example">
+
           <button
             type="button"
             className="btn btn-primary"
           >
             Upvote
           </button>
+
           <button
             type="button"
             className="btn btn-secondary"
           >
             Downvote
           </button>
+
           <button
             type="button"
             className="btn btn-danger"
-            onClick={removeQuote(props.quote.id)}
+            onClick={props.removeQuote()}
           >
             <span aria-hidden="true">&times;</span>
           </button>

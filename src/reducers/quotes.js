@@ -5,8 +5,8 @@ export default (state = [], action) => {
      return [...state, action.quote]
 
     case "REMOVE_QUOTE":
-      debugger
-      return state.filter(quote => quote.id !== action.id)
+      console.log("This is working")
+      return state.filter(quote => quote.id !== action.quoteId)
 
     case "UPVOTE_QUOTE":
         return {
